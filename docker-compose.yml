@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:12.9
+    restart: always
+    environment:
+      - POSTGRES_USER=extraordinary
+      - POSTGRES_PASSWORD=darall
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+volumes:
+  postgres:
